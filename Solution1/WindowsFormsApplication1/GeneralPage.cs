@@ -208,12 +208,6 @@ namespace WindowsFormsApplication1
             grpPessoal.Enabled = true;
         }
 
-        //Cancelar Operação
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //Adicionar Membros
         private void addMembros_Click()
         {
@@ -259,20 +253,54 @@ namespace WindowsFormsApplication1
             txtAnoSaida.Enabled = rbInativo.Checked;
         }
 
-        private void rbAdmin_MouseClick(object sender, MouseEventArgs e)
+        public void perfil()
         {
-            if (check == true)
-            {
-                check = false;
-            }
-            else
-            {
-                check = true;
-            }
-            rbAdmin.Checked = check;
-        }
+            List<Empresarios> empresarios = new List<Empresarios>();
+            Empresarios empresario = new Empresarios();
 
-        //
+            //Conectando com o banco de dados
+            DBConnecting dbconnect = new DBConnecting();
+            dbconnect.Initialize();
+            empresarios = dbconnect.Select();
+
+            for (int i = 0; i < empresarios.Count; i++)
+            {
+                if (Program.Perfil == empresarios[i].codigo)
+                {
+                    empresario = empresarios[i];
+                    break;
+                }
+            }
+
+            string[] split = empresario.dataEntrada.ToString().Split(new Char[] { '/', ' ' });
+            txtDiaEntrada.Text = split[1];
+            txtMesEntrada.Text = split[0];
+            txtAnoEntrada.Text = split[2];
+            grpEmpresarial.Enabled = false;
+            grpPessoal.Enabled = false;
+            txtNome.Text = empresario.nome;
+            txtName.Text = empresario.nome;
+            txtCurso.Text = empresario.curso;
+            txtMatricula.Text = empresario.codigo.ToString();
+            txtEnd.Text = empresario.endereco;
+            txtEndNum.Text = empresario.endNum.ToString();
+            txtEndBairro.Text = empresario.endBairro;
+            txtTel.Text = empresario.telefone;
+            txtRG.Text = empresario.rg.ToString();
+            txtCPF.Text = empresario.cpf;
+            txtFaltas.Text = empresario.faltas.ToString();
+            profilePicture.ImageLocation = empresario.imagem;
+            txtNucleo.Text = empresario.setor;
+            txtCargo.Text = empresario.cargo;
+            txtProjeto.Text = empresario.atividade;
+            txtDep.Text = empresario.dedicatoria;
+            profile2.ImageLocation = empresario.imagem;
+            rbAdmin.Checked = empresario.login;
+            rbInativo.Checked = !empresario.ativo;
+            dbAtivo.Checked = empresario.ativo;
+            Program.edicao = true;
+            check = rbAdmin.Checked;
+        }
 
     }  
 }

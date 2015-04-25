@@ -185,10 +185,11 @@ namespace WindowsFormsApplication1
         {
             this.Hide();
             Program.edicao = false;
-            Program.idCadastro = (int)grvDados.CurrentRow.Cells[0].Value;
+            Program.Perfil = (int)grvDados.CurrentRow.Cells[0].Value;
 
             using (frmGeneral frm = new frmGeneral())
-            {              
+            {
+                frm.perfil();
                 frm.ShowDialog();
             }
         }

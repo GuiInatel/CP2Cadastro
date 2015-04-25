@@ -99,6 +99,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabSelect.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.grpPessoal.SuspendLayout();
@@ -142,6 +144,7 @@
             // 
             // grpPessoal
             // 
+            this.grpPessoal.Controls.Add(this.radioButton1);
             this.grpPessoal.Controls.Add(this.label24);
             this.grpPessoal.Controls.Add(this.txtEndBairro);
             this.grpPessoal.Controls.Add(this.label23);
@@ -228,7 +231,6 @@
             this.rbAdmin.TabIndex = 60;
             this.rbAdmin.Text = "Administrador";
             this.rbAdmin.UseVisualStyleBackColor = true;
-            this.rbAdmin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rbAdmin_MouseClick);
             // 
             // profilePicture
             // 
@@ -698,6 +700,7 @@
             // menuLista
             // 
             this.menuLista.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perfilToolStripMenuItem,
             this.addMembros,
             this.listaMembros});
             this.menuLista.Name = "menuLista";
@@ -771,6 +774,25 @@
             this.sairaToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairaToolStripMenuItem.Text = "Sair";
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(441, 206);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(63, 17);
+            this.radioButton1.TabIndex = 67;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Membro";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // perfilToolStripMenuItem
+            // 
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
+            // 
             // frmGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -805,6 +827,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void perfilToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
 
         #endregion
@@ -880,5 +907,7 @@
         private System.Windows.Forms.TextBox txtEndBairro;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtEndNum;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
     }
 }

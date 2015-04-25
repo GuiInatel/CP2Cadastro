@@ -9,6 +9,7 @@ namespace WindowsFormsApplication1
     static class Program
     {
         public static int idCadastro;
+        public static int Perfil;
         public static int idLogin;
         public static bool edicao;
         /// <summary>
