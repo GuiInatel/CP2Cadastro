@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 
 //Teste Commit
+<<<<<<< HEAD
+=======
+//Outro teste
+//teateatea
+>>>>>>> origin/master
 namespace WindowsFormsApplication1
 {
      public class Empresarios
