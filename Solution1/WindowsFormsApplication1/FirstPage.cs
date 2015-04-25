@@ -84,5 +84,10 @@ namespace WindowsFormsApplication1
                 generalPage.ShowDialog();
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

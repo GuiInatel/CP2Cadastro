@@ -32,6 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addMembros = new System.Windows.Forms.ToolStripMenuItem();
             this.listaMembros = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOpcoes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,8 +41,6 @@
             this.históricoDeAtividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addMembros = new System.Windows.Forms.ToolStripMenuItem();
-            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip2.SuspendLayout();
@@ -67,6 +67,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // menuStrip2
             // 
@@ -90,6 +91,20 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(70, 20);
             this.toolStripMenuItem1.Text = "Membros";
+            // 
+            // perfilToolStripMenuItem
+            // 
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
+            // 
+            // addMembros
+            // 
+            this.addMembros.Name = "addMembros";
+            this.addMembros.Size = new System.Drawing.Size(168, 22);
+            this.addMembros.Text = "Adicionar";
+            this.addMembros.Click += new System.EventHandler(this.addMembros_Click);
             // 
             // listaMembros
             // 
@@ -137,20 +152,6 @@
             this.sairaToolStripMenuItem.Name = "sairaToolStripMenuItem";
             this.sairaToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairaToolStripMenuItem.Text = "Sair";
-            // 
-            // addMembros
-            // 
-            this.addMembros.Name = "addMembros";
-            this.addMembros.Size = new System.Drawing.Size(168, 22);
-            this.addMembros.Text = "Adicionar";
-            this.addMembros.Click += new System.EventHandler(this.addMembros_Click);
-            // 
-            // perfilToolStripMenuItem
-            // 
-            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.perfilToolStripMenuItem.Text = "Perfil";
-            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
             // 
             // frmFisrtPage
             // 
