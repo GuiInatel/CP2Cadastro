@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-//Teste Commit
-<<<<<<< HEAD
-
-=======
->>>>>>> 2fcbfd7f1fa16d7e942d6d3410d4a261b0155db7
-//Outro teste
-//teateatea
 namespace WindowsFormsApplication1
 {
      public class Empresarios
