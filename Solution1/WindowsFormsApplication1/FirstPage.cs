@@ -76,6 +76,7 @@ namespace WindowsFormsApplication1
 
         private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //teste commit
             this.Hide();
             Program.edicao = false;
             using (frmGeneral generalPage = new frmGeneral())
